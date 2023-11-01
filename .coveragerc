@@ -1,0 +1,3 @@
+[run]
+source = src
+omit = nhl-statistics-1/src/tests/**,nhl-statistics-1/src/index.py
