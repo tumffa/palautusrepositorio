@@ -33,3 +33,13 @@ class TestStatisticsService(unittest.TestCase):
         #returns two players with top points
         top_2_names = [player.name for player in self.stats.top(1)]
         self.assertEqual(top_2_names, ["Gretzky", "Lemieux"])
+
+    def test_top_2_by_assists(self):
+        #returns top 2 players by assists
+        top_2_names = [player.name for player in self.stats.top(1, 3)]
+        self.assertEqual(top_2_names, ["Gretzky", "Yzerman"])
+
+    def test_top_2_by_goals(self):
+        #returns top 2 players by assists
+        top_2_names = [player.name for player in self.stats.top(1, 2)]
+        self.assertEqual(top_2_names, ["Lemieux", "Yzerman"])
